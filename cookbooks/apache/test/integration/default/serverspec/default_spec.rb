@@ -5,13 +5,15 @@ describe 'apache' do
 
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
-  
-  it 'localhost works' do
-    expect(true).to eq true
-  end
-  
+
+  #apache is installed
   it "is installed" do
     expect(package('httpd')).to be_installed
+  end
+  
+  #apache is running
+  it "is running" do
+    expect(service 'httpd').to be_running
   end
   
   #is port 80 open
