@@ -1,0 +1,35 @@
+workstation: 54.152.121.140
+chef@chef.io
+	
+chef.io
+
+sudo chef-client --local-mode -r "recipe[motd]"
+sudo chef-client --local-mode -r "recipe[ntp]"
+
+#Template generation
+chef generate template /path/to/cookbook NAME -s /source/file
+chef generate template . ntp -s /etc/ntp.conf
+
+sudo docker images
+
+chef gem list kitchen
+
+kitchen converge
+kitchen test
+kitchen create
+kitchen login
+
+#unit testing
+serverspec.com
+
+
+TEST DRIVEN DEVELOPMENT
+1) Write a test
+2) Watch it fail
+3) Write enough code to make the test pass
+
+rspec spec/unit/recipes/*.rb
+
+ChefSpec
+ServerSpec
+FoodCritic - foodcritic . will inspect coding standards
