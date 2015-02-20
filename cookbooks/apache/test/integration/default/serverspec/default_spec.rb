@@ -1,12 +1,13 @@
-require 'spec_helper'
+require 'serverspec'
+set :backend, :exec
 
-describe 'apache::default' do
+describe 'apache' do
 
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
   
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  it 'localhost works' do
+    expect(true).to eq true
   end
 
 end
