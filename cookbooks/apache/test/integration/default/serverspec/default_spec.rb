@@ -21,7 +21,9 @@ describe 'apache' do
   
   #localhost return
   it 'should respond to an HTTP request' do
-    expect(command 'curl localhost').to return_stdout /.*<title>localhost<\/title>.*/
+  
+  describe command('curl localhost') do
+    its(:stdout) { should eq "it works!" }
   end
 
   
