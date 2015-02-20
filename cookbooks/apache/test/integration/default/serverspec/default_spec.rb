@@ -19,9 +19,7 @@ describe 'apache' do
     it { should be_listening.on('127.0.0.1').with('tcp') }
   end
   
-  #localhost return
-  it 'should respond to an HTTP request' do
-  
+  #localhost return  
   describe command('curl localhost') do
     its(:stdout) { should eq "it works!" }
   end
